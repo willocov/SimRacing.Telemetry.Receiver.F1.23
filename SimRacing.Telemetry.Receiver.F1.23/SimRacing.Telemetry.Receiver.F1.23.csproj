@@ -16,8 +16,9 @@
     <RepositoryUrl>https://github.com/willocov/SimRacing.Telemetry.Receiver.F1.23</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>c#; telemetry; udp; f1; formula1;</PackageTags>
-    <PackageReleaseNotes>Initial upload. Testing in progress</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixed various issues with moving from F1 22. Implemented missing packet types.</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

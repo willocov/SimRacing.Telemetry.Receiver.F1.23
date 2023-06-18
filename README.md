@@ -45,3 +45,13 @@ Finally, when you are done receiving packets, call the StopReceiving method to s
 receiver.StopReceiving();
 ```
 This usage pattern enables you to process different kinds of data packets in different ways, according to your specific application's needs, while the F1_2022_UDP_Receiver class takes care of the low-level details of receiving and parsing the packets.
+
+## References
+These repositories provided useful information when building this project.
+
+Differences from F1 22
+https://github.com/hotlaps/f1-game-udp-specs/tree/main/diff_2022-2023
+
+F1 22 UDP Receiver TypeScript/JavaScript
+https://github.com/raweceek-temeletry/f1-22-udp
+

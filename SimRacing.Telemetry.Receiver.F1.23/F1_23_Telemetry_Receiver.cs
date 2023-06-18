@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using F1_22_UDP_Telemetry_Receiver.Packets;
+using SimRacing.Telemetry.Receiver.F1._23.Packets;
 
 namespace Sim_Racing_UDP_Receiver.Games.F1_2022
 {
@@ -163,6 +164,10 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// Refer to the documentation for detailed information about session history data packet properties.
         /// </summary>
         public event EventHandler<PacketSessionHistoryDataEventArgs> SessionHistoryDataPacketReceived;
+
+        public event EventHandler<PacketTyreSetDataEventArgs> TyreSetDataPacketReceived;
+
+        public event EventHandler<PacketMotionExtraDataEventArgs> MotionExtraDataPacketReceived;
 
         #endregion
 
@@ -351,6 +356,27 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
                                         catch (Exception ex) { Debug.WriteLine("Session History Packet Error: " + ex.Message); }
                                         break;
                                     }
+                                case PacketType.TyreSets:
+                                    try
+                                    {
+                                        PacketTyreSetData packetTyreSetData = new PacketTyreSetData(udpPacketBytes);
+                                        TyreSetDataPacketReceived?.Invoke(this, new PacketTyreSetDataEventArgs(packetTyreSetData));
+                                    }
+                                    catch (Exception ex) { 
+                                        Debug.WriteLine("Tyre Set Packet Error: " + ex.Message);
+                                    }
+                                    break;
+                                case PacketType.MotionExtra:
+                                    try
+                                    {
+                                        PacketMotionExtraData packetMotionExtraData = new PacketMotionExtraData(udpPacketBytes);
+                                        MotionExtraDataPacketReceived?.Invoke(this, new PacketMotionExtraDataEventArgs(packetMotionExtraData));
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        Debug.WriteLine("Motion Extra Packet Error: " + ex.Message);
+                                    }
+                                    break;
                                 default: //Something went wrong...    
                                     {
                                         Debug.WriteLine(" Packet ID does not match a specified packet type: " + header.packetId.ToString());

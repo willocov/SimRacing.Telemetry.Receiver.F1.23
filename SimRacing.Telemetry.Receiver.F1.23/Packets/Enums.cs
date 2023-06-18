@@ -35,7 +35,9 @@ namespace F1_22_UDP_Telemetry_Receiver.Packets
         FinalClassification = 8,
         LobbyInfo = 9,
         CarDamage = 10,
-        SessionHistory = 11
+        SessionHistory = 11,
+        TyreSets = 12,
+        MotionExtra = 13
     }
 
     public enum Tyre

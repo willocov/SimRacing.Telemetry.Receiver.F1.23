@@ -178,6 +178,7 @@ namespace F1_22_UDP_Telemetry_Receiver.Packets
             forecastAccuracy = data[byteIndex];          // 0 = Perfect, 1 = Approximate
             byteIndex++;
             aiDifficulty = data[byteIndex];              // AI Difficulty rating – 0-110
+            byteIndex++;
 
             seasonLinkIdentifier = BitConverter.ToUInt32(data, byteIndex);      // Identifier for season - persists across saves
             byteIndex += 4;

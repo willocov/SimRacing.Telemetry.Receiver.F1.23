@@ -32,15 +32,16 @@ namespace F1_22_UDP_Telemetry_Receiver.Packets
         public Packet(byte[] data)
         {
             packetFormat = BitConverter.ToUInt16(data, 0);
-            gameMajorVersion = data[2];
-            gameMinorVersion = data[3];
-            packetVersion = data[4];                                        // Version of this packet type, all start from 1
-            packetId = data[5];                                             // Identifier for the packet type, see below
-            sessionUID = BitConverter.ToUInt64(data, 6);              // Unique identifier for the session
-            sessionTime = BitConverter.ToSingle(data, 14);             // Session timestamp
-            frameIdentifier = BitConverter.ToUInt32(data, 18);         // Identifier for the frame the data was retrieved on
-            playerCarIndex = data[22];          // Index of player's car in the array
-            secondaryPlayerCarIndex = data[23]; // Index of secondary player's car in the array (splitscreen)
+            gameYear = data[2];
+            gameMajorVersion = data[3];
+            gameMinorVersion = data[4];
+            packetVersion = data[5];                                        // Version of this packet type, all start from 1
+            packetId = data[6];                                             // Identifier for the packet type, see below
+            sessionUID = BitConverter.ToUInt64(data, 7);              // Unique identifier for the session
+            sessionTime = BitConverter.ToSingle(data, 15);             // Session timestamp
+            frameIdentifier = BitConverter.ToUInt32(data, 19);         // Identifier for the frame the data was retrieved on
+            playerCarIndex = data[23];          // Index of player's car in the array
+            secondaryPlayerCarIndex = data[24]; // Index of secondary player's car in the array (splitscreen)
                                                 // 255 if no second player
         }
         /// <summary>

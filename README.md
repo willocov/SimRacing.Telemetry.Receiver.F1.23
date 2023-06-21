@@ -3,8 +3,12 @@
 Note: This is a c# class to receive telemetry data. It is not an application and does not include a user interface. Sample project coming soon.
 Note: Work in progress. Further documentation coming.
 
-The F1_23_Telemetry_Receiver class is a UDP packet receiver specifically designed to work with the 2022 Formula 1 data streams. It provides an event-driven architecture, enabling users to subscribe to different kinds of packet data types (like Car Status, Lap Data, Session Data etc.) and handle them according to their specific needs. The class supports a default or user-specified IP address and port for listening to incoming packets. It's useful for developers aiming to integrate with such games or build applications needing real-time in-game data.
-Usage
+The F1_23_Telemetry_Receiver class is a UDP packet receiver specifically designed to work with the 2023 Formula 1 data streams. It provides an event-driven architecture, enabling users to subscribe to different kinds of packet data types (like Car Status, Lap Data, Session Data etc.) and handle them according to their specific needs. The class supports a default or user-specified IP address and port for listening to incoming packets. It's useful for developers aiming to integrate with such games or build applications needing real-time in-game data.
+
+## UDP Specification from EA:
+https://docs.google.com/document/d/1Q6Js58vndPNzym5FducmQwcjCEKnJJJf/edit?usp=sharing&ouid=109802826249883598381&rtpof=true&sd=true
+
+## Usage
 
 First, you create an instance of the F1_2022_UDP_Receiver class.
 Use the default constructor to listen for any IP and the game's default port.
@@ -41,3 +45,13 @@ Finally, when you are done receiving packets, call the StopReceiving method to s
 receiver.StopReceiving();
 ```
 This usage pattern enables you to process different kinds of data packets in different ways, according to your specific application's needs, while the F1_2022_UDP_Receiver class takes care of the low-level details of receiving and parsing the packets.
+
+## References
+These repositories provided useful information when building this project.
+
+Differences from F1 22
+https://github.com/hotlaps/f1-game-udp-specs/tree/main/diff_2022-2023
+
+F1 22 UDP Receiver TypeScript/JavaScript
+https://github.com/raweceek-temeletry/f1-22-udp
+

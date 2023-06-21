@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace F1_22_UDP_Telemetry_Receiver.Packets
+namespace SimRacing.Telemetry.Receiver.F1_23.Packets
 {
     ////Event String Codes
     //public enum EventCode

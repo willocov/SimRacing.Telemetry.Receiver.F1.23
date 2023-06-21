@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F1_22_UDP_Telemetry_Receiver.Packets
+namespace SimRacing.Telemetry.Receiver.F1_23.Packets
 {
     //This is the packet header that is included in each packet
     //Packet ID (packetId) defines what structure is used for the packet body. See definitions below

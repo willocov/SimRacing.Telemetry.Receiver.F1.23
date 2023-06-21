@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace SimRacing.Telemetry.Receiver.F1._23.Packets
+namespace SimRacing.Telemetry.Receiver.F1_23.Packets
 {
     public class PacketMotionExtraData : Packet
     {

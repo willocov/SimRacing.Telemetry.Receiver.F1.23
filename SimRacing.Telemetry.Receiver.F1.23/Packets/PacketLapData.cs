@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace F1_22_UDP_Telemetry_Receiver.Packets
+namespace SimRacing.Telemetry.Receiver.F1_23.Packets
 {
     /// <summary>
     /// Data representing the lap information of a car during a race.

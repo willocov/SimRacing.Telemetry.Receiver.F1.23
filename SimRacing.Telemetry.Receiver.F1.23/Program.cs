@@ -6,7 +6,6 @@ using System.Diagnostics.Metrics;
 using System.Diagnostics;
 using Sim_Racing_UDP_Receiver.Games.F1_2022;
 using System.Security.Cryptography.X509Certificates;
-using F1_22_UDP_Telemetry_Receiver.Packets;
 
 namespace Sim_Racing_UDP_Receiver
 {
@@ -37,9 +36,9 @@ namespace Sim_Racing_UDP_Receiver
         }
         public class TestEventHandlers
         {
-            public void CarTelemetryPacketReceived(object sender, PacketCarTelemetryDataEventArgs e)
+            public void CarTelemetryPacketReceived(object sender, SimRacing.Telemetry.Receiver.F1_23.Packets.PacketCarTelemetryDataEventArgs e)
             {
-                PacketCarTelemetryData packetCarTelemetryData = e.Packet;
+                SimRacing.Telemetry.Receiver.F1_23.Packets.PacketCarTelemetryData packetCarTelemetryData = e.Packet;
                 Debug.WriteLine("Car Telemetry Data:");
                 Debug.WriteLine($"Speed: " + packetCarTelemetryData.carTelemetryData[packetCarTelemetryData.playerCarIndex].speed + " km/h");
                 Debug.WriteLine($"Throttle: {packetCarTelemetryData.carTelemetryData[packetCarTelemetryData.playerCarIndex].throttle}");

@@ -7,8 +7,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using F1_22_UDP_Telemetry_Receiver.Packets;
-using SimRacing.Telemetry.Receiver.F1._23.Packets;
+using SimRacing.Telemetry.Receiver.F1_23.Packets;
 
 namespace Sim_Racing_UDP_Receiver.Games.F1_2022
 {
@@ -66,7 +65,7 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to packet data through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about packet properties.
         /// </summary>
-        public event EventHandler<PacketEventArgs> PacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketEventArgs> PacketReceived;
 
         /// <summary>
         /// Assigns a function to handle the CarDamageDataPacketReceived event.
@@ -74,7 +73,7 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to car damage data packet through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about car damage data packet properties.
         /// </summary>
-        public event EventHandler<PacketCarDamageDataEventArgs> CarDamageDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketCarDamageDataEventArgs> CarDamageDataPacketReceived;
 
         /// <summary>
         /// Assigns a function to handle the CarSetupDataPacketReceived event.
@@ -82,7 +81,7 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to car setup data packet through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about car setup data packet properties.
         /// </summary>
-        public event EventHandler<PacketCarSetupDataEventArgs> CarSetupDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketCarSetupDataEventArgs> CarSetupDataPacketReceived;
 
         /// <summary>
         /// Assigns a function to handle the CarStatusDataPacketReceived event.
@@ -90,7 +89,7 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to car status data packet through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about car status data packet properties.
         /// </summary>
-        public event EventHandler<PacketCarStatusDataEventArgs> CarStatusDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketCarStatusDataEventArgs> CarStatusDataPacketReceived;
 
         /// <summary>
         /// Assigns a function to handle the CarTelemetryDataPacketReceived event.
@@ -98,7 +97,7 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to car telemetry data packet through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about car telemetry data packet properties.
         /// </summary>
-        public event EventHandler<PacketCarTelemetryDataEventArgs> CarTelemetryDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketCarTelemetryDataEventArgs> CarTelemetryDataPacketReceived;
 
         /// <summary>
         /// Assigns a function to handle the EventDataPacketReceived event.
@@ -106,7 +105,7 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to event data packet through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about event data packet properties.
         /// </summary>
-        public event EventHandler<PacketEventDataEventArgs> EventDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketEventDataEventArgs> EventDataPacketReceived;
 
         /// <summary>
         /// Assigns a function to handle the FinalClassificationDataPacketReceived event.
@@ -114,7 +113,7 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to final classification data packet through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about final classification data packet properties.
         /// </summary>
-        public event EventHandler<PacketFinalClassificationDataEventArgs> FinalClassificationDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketFinalClassificationDataEventArgs> FinalClassificationDataPacketReceived;
 
         /// <summary>
         /// Assigns a function to handle the LapDataPacketReceived event.
@@ -122,7 +121,7 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to lap data packet through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about lap data packet properties.
         /// </summary>
-        public event EventHandler<PacketLapDataEventArgs> LapDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketLapDataEventArgs> LapDataPacketReceived;
 
 
         /// <summary>
@@ -131,7 +130,7 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to lobby info data packet through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about lobby info data packet properties.
         /// </summary>
-        public event EventHandler<PacketLobbyInfoDataEventArgs> LobbyInfoDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketLobbyInfoDataEventArgs> LobbyInfoDataPacketReceived;
 
         /// <summary>
         /// Assigns a function to handle the MotionDataPacketReceived event.
@@ -139,7 +138,7 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to motion data packet through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about motion data packet properties.
         /// </summary>
-        public event EventHandler<PacketMotionDataEventArgs> MotionDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketMotionDataEventArgs> MotionDataPacketReceived;
 
         /// <summary>
         /// Assigns a function to handle the ParticipantsDataPacketReceived event.
@@ -147,7 +146,7 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to participants data packet through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about participants data packet properties.
         /// </summary>
-        public event EventHandler<PacketParticipantsDataEventArgs> ParticipantsDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketParticipantsDataEventArgs> ParticipantsDataPacketReceived;
 
         /// <summary>
         /// Assigns a function to handle the SessionDataPacketReceived event.
@@ -155,7 +154,7 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to session data packet through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about session data packet properties.
         /// </summary>
-        public event EventHandler<PacketSessionDataEventArgs> SessionDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketSessionDataEventArgs> SessionDataPacketReceived;
 
         /// <summary>
         /// Assigns a function to handle the SessionHistoryDataPacketReceived event.
@@ -163,11 +162,11 @@ namespace Sim_Racing_UDP_Receiver.Games.F1_2022
         /// The event provides access to session history data packet through EventArgs.Packet property.
         /// Refer to the documentation for detailed information about session history data packet properties.
         /// </summary>
-        public event EventHandler<PacketSessionHistoryDataEventArgs> SessionHistoryDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketSessionHistoryDataEventArgs> SessionHistoryDataPacketReceived;
 
-        public event EventHandler<PacketTyreSetDataEventArgs> TyreSetDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketTyreSetDataEventArgs> TyreSetDataPacketReceived;
 
-        public event EventHandler<PacketMotionExtraDataEventArgs> MotionExtraDataPacketReceived;
+        public event EventHandler<SimRacing.Telemetry.Receiver.F1_23.Packets.PacketMotionExtraDataEventArgs> MotionExtraDataPacketReceived;
 
         #endregion
 

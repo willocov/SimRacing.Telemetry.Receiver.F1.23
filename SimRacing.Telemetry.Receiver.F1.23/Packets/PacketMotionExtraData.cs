@@ -1,5 +1,4 @@
-﻿using F1_22_UDP_Telemetry_Receiver.Packets;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

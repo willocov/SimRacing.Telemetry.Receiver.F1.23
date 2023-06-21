@@ -127,7 +127,7 @@ namespace SimRacing.Telemetry.Receiver.F1_23.Packets
         /// <summary>
         /// The type of packet.
         /// </summary>
-        public PacketType packetType;
+        public SimRacing.Telemetry.Receiver.F1_23.Packets.PacketType packetType;
         public Packet getHeaderData(byte[] data)
         {
             //This method was added to have a single code base handle the header deserialization across all packet subclasses.

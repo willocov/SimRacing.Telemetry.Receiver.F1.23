@@ -68,7 +68,7 @@ namespace SimRacing.Telemetry.Receiver.F1_23.Packets
         /// <summary>
         /// Event type accessible to the public.
         /// </summary>
-        public EventCode eventType;
+        public SimRacing.Telemetry.Receiver.F1_23.Packets.EventCode eventType;
 
         /// <summary>
         /// Event name for easier readability.
@@ -253,7 +253,7 @@ namespace SimRacing.Telemetry.Receiver.F1_23.Packets
                 Debug.WriteLine(ex.ToString());
             }
         }
-        private EventCode ByteArrayToEventCode(byte[] array)
+        private SimRacing.Telemetry.Receiver.F1_23.Packets.EventCode ByteArrayToEventCode(byte[] array)
         {
             if (array.Length != 4)
                 throw new ArgumentException("Array must have a length of 4.", nameof(array));
